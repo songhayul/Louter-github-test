@@ -1,0 +1,115 @@
+/* CSS 기본 코드 없애기 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+body {
+  background-color: #1a1a2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+  
+/* 계산기 레이아웃 */
+.calculator {
+  background-color: #16213e;
+  border-radius: 16px;
+  padding: 24px;
+  width: 320px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* 위쪽 (수식 나오는) 칸 */
+.display {
+  background-color: #0f3460;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  text-align: right;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+  
+/* 수식 (위쪽 작은 글씨) */
+.display__expression {
+  color: #a0b4cc;
+  font-size: 14px;
+  min-height: 20px;
+  margin-bottom: 8px;
+  word-break: break-all;
+}
+  
+/* 현재 숫자 (아래쪽 큰 글씨) */
+.display__result {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  word-break: break-all;
+}
+
+/* 버튼 컨테이너 */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 12px;
+}
+  
+/* 버튼 공통 디자인 */
+.btn {
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-family: inherit;
+  padding: 18px 0;
+  cursor: pointer;
+  color: #ffffff;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+  
+/* 버튼 눌렸을 때 */
+.btn:active {
+  transform: scale(0.94);
+}
+  
+/* 숫자 버튼 디자인 */
+.btn--number {
+  background-color: #1e2a45;
+  color: #e0e0e0;
+}
+
+/* 숫자 버튼에 커서 올렸을 때 */
+.btn--number:hover {
+  background-color: #2a3a5c;
+}
+  
+/* 기능 버튼 */
+.btn--function {
+  background-color: #2d4a7a;
+}
+
+/* 기능 버튼에 커서 올렸을 때 */
+.btn--function:hover {
+  background-color: #3a5c8f;
+}
+  
+/* 수식 버튼 */
+.btn--operator {
+  background-color: #e94560;
+}
+
+/* 수식 버튼에 커서 올렸을 때 */
+.btn--operator:hover {
+  background-color: #ff6b7a;
+}
+  
+/* 0 버튼 예외 디자인 */
+.btn--zero {
+  grid-column: span 2; 
+  text-align: center;
+  padding: 18px 24px;
+}
