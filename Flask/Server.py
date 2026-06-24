@@ -60,7 +60,7 @@ def create():
         return '''
             <form action="/create/" method="POST">
                 <input type="text" name="title" placeholder="제목"><br>
-                <textarea name="body" placeholder="내용"></textarea><br>
+                <textarea name="body" placeholder="내용"></textarea>br>
                 <input type="submit" value="저장">
             </form>
         '''
